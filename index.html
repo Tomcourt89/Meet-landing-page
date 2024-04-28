@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Meet landing page</title>
 
@@ -20,21 +24,23 @@
     </header>
     <main>
       <section class="hero">
-        <picture>
-          <source media="(min-width: 1024px)" srcset="./assets/desktop/image-hero-left.png">
+        <picture class="img-left">
+          <source media="(min-width: 64em)" srcset="./assets/desktop/image-hero-left.png">
           <img src="./assets/tablet/image-hero.png" alt="Avatar photos of various people">
         </picture>
 
-        <h1>Group Chat for Everyone</h1>
+        <div>
+          <h1>Group Chat for Everyone</h1>
 
-        <p>Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+          <p>Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
 
-        <a href="#" class="btn hero-dload">Download <span>v1.3</span></a>
-        <a href="#" class="btn">What is it?</a>
+          <a href="#" class="btn dload hero-dload">Download <span>v1.3</span></a>
+          <a href="#" class="btn">What is it?</a>
+        </div>
 
-        <picture>
-          <source media="(min-width: 1024px)" srcset="./assets/desktop/image-hero-right.png">
-          <img src="#" alt="Avatar photos of various people">
+        <picture class="img-right">
+          <source media="(min-width: 64em)" srcset="./assets/desktop/image-hero-right.png">
+          <img src="" alt="Avatar photos of various people">
         </picture>
       </section>
 
@@ -62,7 +68,7 @@
 
       <p>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
 
-      <a href="#" class="btn">Download <span>v1.3</span></a>
+      <a href="#" class="btn dload">Download <span>v1.3</span></a>
     </footer>
   </div>
   <div class="attribution">
