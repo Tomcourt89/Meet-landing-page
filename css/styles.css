@@ -130,6 +130,7 @@ body {
         border-radius: 29px;
         padding: 16px 29px;
         transition: background ease 0.5s;
+        text-wrap: nowrap;
 
         &:hover,
         &:focus {
@@ -171,6 +172,10 @@ header {
 
     .logo {
         max-width: 119px;
+    }
+
+    @media (width >= 64em) {
+        margin-block: 80px 61px;
     }
 }
 
@@ -218,9 +223,33 @@ header {
     }
 
     @media (width >= 64em) {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        .img-left {
+            content: url(../assets/desktop/image-hero-left.png);
+            position: absolute;
+            width: 33%;
+            left: calc(10px + ((var(--img-overflow) / 2) * -1) - var(--side-spacing));
+        }
+
         .img-right {
             display: block;
+            content: url(../assets/desktop/image-hero-right.png);
+            position: absolute;
+            width: 33%;
+            top: 47px;
+            right: calc(10px + ((var(--img-overflow) / 2) * -1) - var(--side-spacing));
         }
+
+        > div {
+            width: 100%;
+            max-width: 540px;
+            margin-block: 47px 194px;
+            gap: 32px;
+        }
+
     }
 }
 
@@ -263,6 +292,23 @@ header {
             }
         }
     }
+
+    @media (width >= 64em) {
+        margin-bottom: 184px;
+
+        .gallery {
+            margin-block: 62px 80px;
+            gap: 30px;
+        }
+
+        .content-wrapper {
+            max-width: 540px;
+
+            h2 {
+                margin: 16px 48px 32px;
+            }
+        }
+    }
 }
 
 footer {
@@ -286,8 +332,13 @@ footer {
     }
 
     @media (width >= 40em) {
-        background: url(../assets/tablet/image-footer.jpg);
+        background: center / cover no-repeat url(../assets/tablet/image-footer.jpg);
     }
+
+    @media (width >= 64em) {
+        background: center / cover no-repeat url(../assets/desktop/image-footer.jpg);
+    }
+
 }
 
 .footer-content {
@@ -311,6 +362,21 @@ footer {
 
         p {
             margin-block: 32px 40px;
+        }
+    }
+
+    @media (width >= 64em) {
+        flex-direction: row;
+        max-width: 100%;
+        width: 100%;
+        margin-block: 88px 114px;
+        justify-content: space-between;
+
+        h2,
+        p {
+            text-align: left;
+            margin: 0;
+            max-width: 350px;
         }
     }
 }
