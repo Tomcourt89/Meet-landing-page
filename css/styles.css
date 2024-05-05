@@ -118,6 +118,7 @@ body {
         font-size: var(--text-base);
         line-height: var(--line-base);
         font-weight: 500;
+        color: var(--grey);
     }
 
     .btn {
@@ -149,6 +150,10 @@ body {
         }
 
         span {
+            color: hsl(268, 100%, 86%);
+        }
+
+        &.hero-dload span {
             color: var(--cyan);
         }
     }
@@ -183,10 +188,33 @@ header {
         align-items: center;
         gap: 16px;
         margin-block: 48px 148px;
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 16px;
+        }
     }
 
     .img-right {
         display: none;
+    }
+
+    @media (width >= 40em) {
+        > div {
+            max-width: 457px;
+            margin: 72px auto 164px;
+            gap: 24px;
+            
+            h1 {
+                margin: 0 59px;
+            }
+
+            .btn-container {
+                flex-direction: row;
+            }
+        }
     }
 
     @media (width >= 64em) {
@@ -213,12 +241,27 @@ header {
         }
     }
 
-    h2 {
-        margin-block: 24px 32px;
-    }
+    .content-wrapper {
+        max-width: 573px;
 
-    p {
-        color: var(--grey);
+        h2 {
+            margin-block: 24px 32px;
+        }
+    }
+    
+
+    @media (width >= 40em) {
+        .gallery {
+            margin-block: 67px 48px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 11px;
+        }
+
+        .content-wrapper {
+            h2 {
+                margin: 16px 64px 32px;
+            }
+        }
     }
 }
 
@@ -241,6 +284,10 @@ footer {
     h4 {
         margin-top: -28px;
     }
+
+    @media (width >= 40em) {
+        background: url(../assets/tablet/image-footer.jpg);
+    }
 }
 
 .footer-content {
@@ -249,9 +296,21 @@ footer {
     align-items: center;
     margin-block: 64px 72px;
     color: var(--white);
+    max-width: 573px;
 
     p {
         margin-block: 24px 32px;
         font-size: var(--text-lg);
+        color: var(--white);
+    }
+
+    @media (width >= 40em) {
+        h2 {
+            margin: 0 58px;
+        }
+
+        p {
+            margin-block: 32px 40px;
+        }
     }
 }
